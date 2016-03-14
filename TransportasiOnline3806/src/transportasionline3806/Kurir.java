@@ -15,6 +15,7 @@ public class Kurir extends Pesanan{
 
     public Kurir(String idTrans, String jenisPesanan, String tujuan, int jarak, int tarif, String namaBarang) {
         super(idTrans, jenisPesanan, tujuan, jarak, tarif);
+        this.namaBarang = namaBarang;
     }
     
     

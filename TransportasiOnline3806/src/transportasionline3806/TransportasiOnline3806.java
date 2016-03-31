@@ -5,18 +5,21 @@
  */
 package transportasionline3806;
 
+import java.io.IOException;
+
 /**
  *
- * @author eddomirsyad
+ * @author eddomirsyad1
+ * 
  */
 public class TransportasiOnline3806 {
 
     /**
      * @param args the command line arguments
      */
-    public static void main(String[] args) {
+    public static void main(String[] args) throws IOException {
         // TODO code application logic here
-        System.out.println("oke");
+        Menu m = new Menu();
     }
     
 }

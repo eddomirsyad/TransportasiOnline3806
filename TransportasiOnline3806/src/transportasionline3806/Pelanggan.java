@@ -15,12 +15,13 @@ public class Pelanggan extends Orang{
     private String alamat;
     private int jml;
     
-    public Pelanggan (String nama, String notelp, long idPelanggan, String alamat){
-        Pelanggan p = new Pelanggan(nama, notelp, idPelanggan, alamat);
-        p.setNama(nama);
-        p.setNotelp(notelp);
+    public Pelanggan (String nama, int notelp, long idPelanggan, String alamat){
+//        Pelanggan p = new Pelanggan(nama, notelp, idPelanggan, alamat);
+        this.setNama(nama);
+        this.setNotelp(notelp);
         this.idPelanggan = idPelanggan;
         this.alamat = alamat;
+//        pesanan = new Pesanan[100];
     }
     
     public void createPesanan (String idTrans, String jenisPesanan, String tujuan, int jarak, int tarif){

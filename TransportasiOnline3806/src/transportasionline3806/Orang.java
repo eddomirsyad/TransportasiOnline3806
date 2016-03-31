@@ -11,7 +11,7 @@ package transportasionline3806;
  */
 public abstract class Orang {
     private String nama;
-    private String notelp;
+    private int notelp;
     
     public void setNama (String nama){
         this.nama = nama;
@@ -19,10 +19,10 @@ public abstract class Orang {
     public String getNama(){
         return nama;
     }
-    public void setNotelp (String notelp){
+    public void setNotelp (int notelp){
         this.notelp = notelp;
     }
-    public String getNotelp(){
+    public int getNotelp(){
         return notelp;
     }
 }

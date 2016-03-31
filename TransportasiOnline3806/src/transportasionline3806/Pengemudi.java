@@ -14,11 +14,12 @@ public class Pengemudi extends Orang{
     private long idPengemudi;
     private int jml;
     
-    public Pengemudi (String nama, String notelp, long idPengemudi){
-        Pengemudi peng = new Pengemudi(nama, notelp, idPengemudi);
-        peng.setNama(nama);
-        peng.setNotelp(notelp);
+    public Pengemudi (String nama, int notelp, long idPengemudi){
+        this.setNama(nama);
+        this.setNotelp(notelp);
         this.idPengemudi = idPengemudi;
+//        pesanan = new Pesanan[100];
+        jml = 0;
     }
     
     public void addPesanan(Pesanan p){

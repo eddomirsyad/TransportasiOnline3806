@@ -9,7 +9,7 @@ import java.io.IOException;
 
 /**
  *
- * @author eddomirsyad1
+ * @author eddomirsyad
  * 
  */
 public class TransportasiOnline3806 {
@@ -20,6 +20,7 @@ public class TransportasiOnline3806 {
     public static void main(String[] args) throws IOException {
         // TODO code application logic here
         Menu m = new Menu();
+        m.mainMenu();
     }
     
 }

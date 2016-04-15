@@ -15,13 +15,18 @@ public class Pesanan {
     private int tarif;
     private int jarak;
     private String idTrans;
+    private boolean status;
+    private String alamat;
+    protected static int hitungTrans;
 
-    public Pesanan(String idTrans, String jenisPesanan, String tujuan, int jarak, int tarif) {
+    public Pesanan(String idTrans, String jenisPesanan, String alamat, String tujuan, int jarak, int tarif) {
+        hitungTrans++;
         this.idTrans = idTrans;
         this.jenisPesanan = jenisPesanan;
         this.tujuan = tujuan;
         this.jarak = jarak;
         this.tarif = tarif;
+        
     }
     
     public void setJenisPesanan (String jenisPesanan){
@@ -55,4 +60,27 @@ public class Pesanan {
     public int getJarak (){
         return jarak;
     }
+
+    public String getIdTrans() {
+        return idTrans;
+    }
+
+    public void setIdTrans(String idTrans) {
+        this.idTrans = idTrans;
+    }
+    public void setTaken() {
+        if (this.status) {
+            this.status = false;
+        }
+    }
+    public boolean getStatus() {
+        return status;
+    }
+
+    public String getAlamat() {
+        return alamat;
+    }
+
+    
+  
     }

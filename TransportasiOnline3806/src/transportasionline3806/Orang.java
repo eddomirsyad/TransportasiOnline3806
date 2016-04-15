@@ -11,7 +11,12 @@ package transportasionline3806;
  */
 public abstract class Orang {
     private String nama;
-    private int notelp;
+    private String notelp;
+
+    public Orang(String nama, String notelp) {
+        this.nama = nama;
+        this.notelp = notelp;
+    }
     
     public void setNama (String nama){
         this.nama = nama;
@@ -19,10 +24,12 @@ public abstract class Orang {
     public String getNama(){
         return nama;
     }
-    public void setNotelp (int notelp){
+    public void setNotelp (String notelp){
         this.notelp = notelp;
     }
-    public int getNotelp(){
+
+    public String getNotelp() {
         return notelp;
     }
+    
 }

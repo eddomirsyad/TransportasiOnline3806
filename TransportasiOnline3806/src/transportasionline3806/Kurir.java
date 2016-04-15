@@ -13,12 +13,11 @@ public class Kurir extends Pesanan{
     private String namaBarang;
     
 
-    public Kurir(String idTrans, String jenisPesanan, String tujuan, int jarak, int tarif, String namaBarang) {
-        super(idTrans, jenisPesanan, tujuan, jarak, tarif);
+    public Kurir(String idTrans, String jenisPesanan, String alamat, String tujuan, int jarak, int tarif, String namaBarang) {
+        super(idTrans, jenisPesanan, alamat, tujuan, jarak, tarif);
+
         this.namaBarang = namaBarang;
     }
-    
-    
     public void setNamaBarang (String namaBarang){
         this.namaBarang = namaBarang;
     }

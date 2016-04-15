@@ -11,12 +11,15 @@ package transportasionline3806;
  */
 public class Pengemudi extends Orang{
     private Pesanan[] pesanan;
-    private long idPengemudi;
+    private String idPengemudi;
     private int jml;
+    public static int hitungPengemudi;
     
-    public Pengemudi (String nama, int notelp, long idPengemudi){
-        this.setNama(nama);
-        this.setNotelp(notelp);
+    public Pengemudi (String nama, String notelp, String idPengemudi){
+        super(nama, notelp);
+        pesanan = new Pesanan[100];
+        jml = 0;
+        hitungPengemudi++;
         this.idPengemudi = idPengemudi;
 //        pesanan = new Pesanan[100];
         jml = 0;
@@ -25,11 +28,19 @@ public class Pengemudi extends Orang{
     public void addPesanan(Pesanan p){
         pesanan[jml] = p;
         jml++;
+        if(p.getJenisPesanan().equals("Kurir")){
+            pesanan[jml] = p;
+            p.setTaken();
+            jml++;
+        }else {
+            System.out.println("Anda tidak bisa mengambil pesanan ini.");
+        }
+        
     }
-    public void setIdPengemudi (long idPengemudi){
+    public void setIdPengemudi (String idPengemudi){
         this.idPengemudi = idPengemudi;
     }
-    public long getIdPengemudi (){
+    public String getIdPengemudi (){
         return idPengemudi;
     }
     
@@ -37,21 +48,25 @@ public class Pengemudi extends Orang{
         return pesanan[x];
     }
     
-    public void removePesanan(Pesanan p){
+    public void removePesanan(String idTrans){
         boolean ktm = false;
         for (int i=0; i<jml;i++){
-            if(pesanan[i].equals(p)){
+            if(pesanan[i].getIdTrans().equals(idTrans)){
                 ktm = true;
                 for (int j=i; j<jml; j++){
                     pesanan[j] = pesanan[j+1];
                 }
                 jml--;
+                System.out.println("Data berhasil dihapus.");
                 break;
             }
         }
         if (ktm == false){
-            System.out.println("Pesanan tidak ada.");
+            System.out.println("Pesanan tidak ditemukan.");
         }
         
     }
+     public int getJml(){
+         return jml;
+     }
 }
